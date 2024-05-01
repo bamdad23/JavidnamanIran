@@ -129,7 +129,7 @@
       "password": "qeUUaVSyGo+C",
       "tls": {
         "enabled": true,
-        "server_name": "AlBOrZ.hideandsurf.com",
+        "server_name": "alborz.hideandsurf.com",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -158,7 +158,7 @@
       "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
       "tls": {
         "enabled": true,
-        "server_name": "AlBOrZ.hIdEaNDSuRf.COm",
+        "server_name": "DuCkNGO.hIdEaNDSuRf.COm",
         "alpn": "http/1.1",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -171,7 +171,7 @@
         "type": "ws",
         "path": "/fJ4A1dBV",
         "headers": {
-          "Host": "AlBoRz.hIdEaNDSuRf.COm"
+          "Host": "DuCkNGO.hIdEaNDSuRf.COm"
         }
       },
       "packet_encoding": "xudp"
