@@ -120,7 +120,7 @@
       "type": "hysteria2",
       "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nHysteria2",
       "domain_strategy": "ipv4_only",
-      "server": "85.224.17.230",
+      "server": "83.226.36.112",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
