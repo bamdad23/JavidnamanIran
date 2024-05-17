@@ -175,8 +175,7 @@
         }
       },
       "packet_encoding": "xudp"
-    },
-    {
+    },{
       "type": "dns",
       "tag": "dns-out"
     },
@@ -226,7 +225,11 @@
         "clash_mode": "Global",
         "outbound": "select"
       },
-    {
+      {
+        "geoip": "private",
+        "outbound": "bypass"
+      },
+     {
         "rule_set": "iran-geosite-proxy",
         "outbound": "Internet"
         },
