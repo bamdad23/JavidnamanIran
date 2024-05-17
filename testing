@@ -226,16 +226,42 @@
         "clash_mode": "Global",
         "outbound": "select"
       },
+    {
+        "rule_set": "iran-geosite-proxy",
+        "outbound": "Internet"
+        },
+     {
+        "rule_set": "iran-geosite-all",
+        "outbound": "direct"
+        },
+     {
+        "rule_set": "iran-geosite-ads",
+        "outbound": "block"
+        }
+      
+    ],
+    "rule_set": [
+    {
+      "type": "remote",
+        "tag": "iran-geosite-proxy",
+        "format": "binary",
+        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-proxy.srs"  
+    },
       {
-        "geoip": "private",
-        "outbound": "bypass"
+         "tag": "iran-geosite-ads",
+        "type": "remote",
+        "format": "binary",
+        "update_interval": "7d",
+        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-ads.srs"
       },
       {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "geoip": "ir",
-        "outbound": "bypass"
+        "tag": "iran-geosite-all",
+        "type": "remote",
+        "format": "binary",
+        "update_interval": "7d",
+        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-all.srs"
       }
+
     ],
     "final": "select",
     "auto_detect_interface": true,
