@@ -7,19 +7,25 @@
     "servers": [
       {
         "tag": "Internet-dns",
-        "address": "https://8.8.8.8/dns-query",
+        "address": "tcp://94.140.14.14",
         "address_resolver": "direct-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
         "detour": "Internet"
       },
       {
         "tag": "Best Latency-dns",
-        "address": "https://8.8.8.8/dns-query",
+        "address": "tcp://94.140.14.14",
         "address_resolver": "direct-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
         "detour": "Best Latency"
       },
       {
         "tag": "direct-dns",
         "address": "local",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
         "detour": "direct"
       },
       {
