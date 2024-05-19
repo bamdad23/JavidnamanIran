@@ -1,37 +1,35 @@
 {
   "log": {
-    "level": "warn",
-    "output": "box.log",
-    "timestamp": true
+    "disabled": true,
+    "level": "panic"
   },
   "dns": {
     "servers": [
       {
-        "tag": "dns-remote",
-        "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct",
-        "strategy": "ipv4_only"
-      },
-      {
-        "tag": "dns-trick-direct",
-        "address": "https://sky.rethinkdns.com/",
+        "tag": "Internet-dns",
+        "address": "tcp://94.140.14.14",
+        "address_resolver": "direct-dns",
+        "address_strategy": "ipv4_only",
         "strategy": "ipv4_only",
-        "detour": "direct-fragment"
+        "detour": "Internet"
       },
       {
-        "tag": "dns-direct",
+        "tag": "Best Latency-dns",
+        "address": "tcp://94.140.14.14",
+        "address_resolver": "direct-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "detour": "Best Latency"
+      },
+      {
+        "tag": "direct-dns",
         "address": "local",
-        "address_resolver": "dns-local",
+        "address_strategy": "ipv4_only",
         "strategy": "ipv4_only",
         "detour": "direct"
       },
       {
-        "tag": "dns-local",
-        "address": "local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
+        "tag": "block-dns",
         "address": "rcode://success"
       }
     ],
