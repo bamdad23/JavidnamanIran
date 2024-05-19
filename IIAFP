@@ -35,7 +35,7 @@
     ],
     "rules": [
       {
-        "domain": "zula.ir",
+        "domain": "vlan244-221.azeronline.com",
         "server": "dns-direct"
       },
       {
@@ -151,7 +151,7 @@
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "zula.ir",
+      "server": "vlan244-221.azeronline.com",
       "server_port": 443,
       "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
       "tls": {
