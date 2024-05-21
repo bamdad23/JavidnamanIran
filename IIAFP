@@ -120,7 +120,7 @@
       "type": "hysteria2",
       "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nHysteria2",
       "domain_strategy": "ipv4_only",
-      "server": "37.27.84.192",
+      "server": "37.27.40.21",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -153,7 +153,7 @@
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "zula.ir",
+      "server": "starlink.com",
       "server_port": 443,
       "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
       "tls": {
