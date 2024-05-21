@@ -1,41 +1,43 @@
 {
   "log": {
-    "disabled": true,
-    "level": "panic"
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
   },
   "dns": {
     "servers": [
       {
-        "tag": "Internet-dns",
-        "address": "tcp://94.140.14.14",
-        "address_resolver": "direct-dns",
-        "address_strategy": "ipv4_only",
-        "strategy": "ipv4_only",
-        "detour": "Internet"
+        "tag": "dns-remote",
+        "address": "https://8.8.8.8/dns-query",
+        "address_resolver": "dns-direct",
+        "strategy": "ipv4_only"
       },
       {
-        "tag": "Best Latency-dns",
-        "address": "tcp://94.140.14.14",
-        "address_resolver": "direct-dns",
-        "address_strategy": "ipv4_only",
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
         "strategy": "ipv4_only",
-        "detour": "Best Latency"
+        "detour": "direct-fragment"
       },
       {
-        "tag": "direct-dns",
+        "tag": "dns-direct",
         "address": "local",
-        "address_strategy": "ipv4_only",
+        "address_resolver": "dns-local",
         "strategy": "ipv4_only",
         "detour": "direct"
       },
       {
-        "tag": "block-dns",
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
         "address": "rcode://success"
       }
     ],
     "rules": [
       {
-        "domain": "vlan244-221.azeronline.com",
+        "domain": "zula.ir",
         "server": "dns-direct"
       },
       {
@@ -99,7 +101,7 @@
       "outbounds": [
         "auto",
         "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nHysteria2",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nVless-cdn"
+        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nWless-cdn"
       ],
       "default": "auto"
     },
@@ -108,7 +110,7 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nHysteria2",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nVless-cdn"
+        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nWless-cdn"
       ],
       "url": "http://www.google.com/generate_204",
       "interval": "10m0s",
@@ -118,7 +120,7 @@
       "type": "hysteria2",
       "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nHysteria2",
       "domain_strategy": "ipv4_only",
-      "server": "37.27.40.21",
+      "server": "37.27.84.192",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -145,13 +147,13 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nVless-cdn",
+      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\nWless-cdn",
       "tls_fragment": {
         "enabled": true,
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "vlan244-221.azeronline.com",
+      "server": "zula.ir",
       "server_port": 443,
       "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
       "tls": {
@@ -228,42 +230,12 @@
         "geoip": "private",
         "outbound": "bypass"
       },
-     {
-        "rule_set": "iran-geosite-proxy",
-        "outbound": "Internet"
-        },
-     {
-        "rule_set": "iran-geosite-all",
-        "outbound": "direct"
-        },
-     {
-        "rule_set": "iran-geosite-ads",
-        "outbound": "block"
-        }
-      
-    ],
-    "rule_set": [
-    {
-      "type": "remote",
-        "tag": "iran-geosite-proxy",
-        "format": "binary",
-        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-proxy.srs"  
-    },
       {
-         "tag": "iran-geosite-ads",
-        "type": "remote",
-        "format": "binary",
-        "update_interval": "7d",
-        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-ads.srs"
-      },
-      {
-        "tag": "iran-geosite-all",
-        "type": "remote",
-        "format": "binary",
-        "update_interval": "7d",
-        "url": "https://github.com/bootmortis/sing-geosite/releases/latest/download/geosite-all.srs"
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
       }
-
     ],
     "final": "select",
     "auto_detect_interface": true,
