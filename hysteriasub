@@ -405,12 +405,40 @@
     },
     {
       "type": "hysteria2",
+      "tag": "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕",
+      "server": "37.27.40.21",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "tVHUA6na0Cyu"
+      },
+      "password": "https://t.me/javidnamanIran",
+      "tls": {
+        "enabled": true,
+        "server_name": "alborz.seyed-ali-khamenei-binamous.site",
+        "alpn": "h3",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "ech": {
+          "enabled": true,
+          "pq_signature_schemes_enabled": true,
+          "config": [
+       		"-----BEGIN ECH CONFIGS-----",
+            "AFf+DQBTAAAgACDFjn9bYsyxCVBoOlDicUgxNykCK9UufM7XhMoot6uDIQAIAAEA",
+            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
+            "-----END ECH CONFIGS-----"
+          ]
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
       "tag": "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 𝐢𝐩𝐯𝟔",
       "server": "2a01:4f9:c012:cece::1",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-      "password": "Z1voYR6fIIyx"
+      "password": "tVHUA6na0Cyu"
       },
       "password": "https://t.me/javidnamaniran",
       "tls": {
@@ -423,8 +451,8 @@
           "enabled": true,
           "pq_signature_schemes_enabled": true,
           "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACACjC3+N59gHIB+3mvphP58OZ89mJ4M6t/cOX4iO86IZwAIAAEA",
+          "-----BEGIN ECH CONFIGS-----",
+            "AFf+DQBTAAAgACDFjn9bYsyxCVBoOlDicUgxNykCK9UufM7XhMoot6uDIQAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
             ]
@@ -441,7 +469,7 @@
       },
       "server": "188.114.96.12",
       "server_port": 443,
-      "uuid": "042a227a-c114-4280-9d77-649e30434f10",
+      "uuid": "ba4f3a16-6294-47ef-94b8-1f7ac93c68b9",
       "tls": {
         "enabled": true,
         "server_name": "duckngo.seyed-ali-khamenei-binamous.site",
@@ -455,7 +483,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/https://t.me/javidnamaniran",
+        "path": "/@azadi_az_inja_migzare",
         "headers": {
           "Host": "duckngo.seyed-ali-khamenei-binamous.site"
         }
@@ -472,7 +500,7 @@
       },
       "server": "2a06:98c1:3121::c",
       "server_port": 443,
-      "uuid": "042a227a-c114-4280-9d77-649e30434f10",
+      "uuid": "ba4f3a16-6294-47ef-94b8-1f7ac93c68b9",
       "tls": {
         "enabled": true,
         "server_name": "duckngo.seyed-ali-khamenei-binamous.site",
@@ -486,7 +514,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/https://t.me/javidnamaniran",
+        "path": "/@azadi_az_inja_migzare",
         "headers": {
           "Host": "duckngo.seyed-ali-khamenei-binamous.site"
         }
