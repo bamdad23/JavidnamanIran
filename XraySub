@@ -237,12 +237,12 @@
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "OOfyKwoVed2b"
+        "password": "@azadi_az_inja_migzare"
       },
-      "password": "GF8mBZ94AuIi",
+      "password": "zCBVQV9M9YGd",
       "tls": {
         "enabled": true,
-        "server_name": "havadareto-saeidam.seyed-ali-khamenei-binamous.site",
+        "server_name": "hsahand.seyed-ali-khamenei-binamous.site",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -250,10 +250,12 @@
           "enabled": true,
           "pq_signature_schemes_enabled": true,
           "config": [
-           "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACCUKNpX8TQ/7ZpIsNbXItDPFlW6XUPs2A5OMBJ/SiuhEAAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
+          "-----BEGIN ECH KEYS-----",
+            "ACCa8TlqzayDZOeEwTYQZtcbYUY8dpxeNBd/3g6CkKBM5wBX/g0AUwAAIAAg4OBC",
+            "Z3RMYIibCOesDW7lTIAFfdHgC+3A167NYPlUqkgACAABAAEAAQADACBbLS1wcS1z",
+            "aWduYXR1cmUtc2NoZW1lcy1lbmFibGVkXQAA",
+            "-----END ECH KEYS-----"
+
           ]
         }
       }
@@ -269,7 +271,7 @@
       },
       "server": "arvancloudstatus.ir",
       "server_port": 443,
-      "uuid": "9aef3336-cb78-43b7-a076-ad4aad7fdff6",
+      "uuid": "29cf96e6-8008-4233-a883-4b5daeb72309",
       "tls": {
         "enabled": true,
         "server_name": "helloworld.seyed-ali-khamenei-binamous.site",
@@ -283,7 +285,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/@JavidNamanIran",
+        "path": "/@azadi_az_inja_migzare",
         "headers": {
           "Host": "helloworld.seyed-ali-khamenei-binamous.site"
         }
