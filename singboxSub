@@ -241,9 +241,9 @@
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "@azadi_az_inja_migzare"
+        "password": "OOfyKwoVed2b"
       },
-      "password": "zCBVQV9M9YGd",
+      "password": "GF8mBZ94AuIi",
       "tls": {
         "enabled": true,
         "server_name": "sahand.seyed-ali-khamenei-binamous.site",
@@ -255,7 +255,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACDg4EJndExgiJsI56wNbuVMgAV90eAL7cDXrs1g+VSqSAAIAAEA",
+            "AFf+DQBTAAAgACCUKNpX8TQ/7ZpIsNbXItDPFlW6XUPs2A5OMBJ/SiuhEAAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -268,7 +268,7 @@
       "domain_strategy": "prefer_ipv6",
       "server": "arvancloudstatus.ir",
       "server_port": 443,
-      "uuid": "29cf96e6-8008-4233-a883-4b5daeb72309",
+      "uuid": "9aef3336-cb78-43b7-a076-ad4aad7fdff6",
       "tls": {
         "enabled": true,
         "server_name": "helloworld.seyed-ali-khamenei-binamous.site",
@@ -282,7 +282,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/@azadi_az_inja_migzare",
+        "path": "/@JavidNamanIran",
         "headers": {
           "Host": "helloworld.seyed-ali-khamenei-binamous.site"
         }
