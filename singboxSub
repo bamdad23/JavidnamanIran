@@ -111,8 +111,8 @@
         "Best Latency",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
-        "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag"
+        "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
+        "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag"
       ]
     },
     {
@@ -121,8 +121,8 @@
       "outbounds": [
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
-        "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag"
+        "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
+        "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag"
       ],
       "url": "http://www.google.com/generate_204",
       "interval": "10m0s",
@@ -187,7 +187,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
+      "tag": "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § hy2+ech",
       "domain_strategy": "prefer_ipv6",
       "server": "all-in.daiijannapoleon.fun",
       "server_port": 443,
@@ -216,7 +216,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag",
+      "tag": "𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@JavidnamanIran § vl+ws+tls+cdn+frag",
       "domain_strategy": "prefer_ipv6",
       "server": "arvancloudstatus.ir",
       "server_port": 443,
