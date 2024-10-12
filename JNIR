@@ -35,7 +35,7 @@
         "rewrite_ttl": 20
       },
       {
-        "domain": "www.msftconnecttest.com",
+        "domain": "www.gstatic.com",
         "server": "Internet-dns",
         "rewrite_ttl": 3000
       },
@@ -124,8 +124,7 @@
       "outbounds": [
         "Best Latency",
         "🇸🇪 Simorgh 1",
-        "🇸🇪 Simorgh 2",
-        "🇸🇪 Simorgh 3"
+        "🇸🇪 Simorgh 2"
       ],
       "default": "Best Latency"
     },
@@ -134,10 +133,9 @@
       "tag": "Best Latency",
       "outbounds": [
         "🇸🇪 Simorgh 1",
-        "🇸🇪 Simorgh 2",
-        "🇸🇪 Simorgh 3"
+        "🇸🇪 Simorgh 2"
       ],
-      "url": "http://www.msftconnecttest.com/connecttest.txt",
+      "url": "http://www.gstatic.com/generate_204",
       "interval": "3m0s",
       "tolerance": 1,
       "idle_timeout": "9m0s"
@@ -168,40 +166,16 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇸🇪 Simorgh 2",
       "server": "for-real.hpcode.ir",
       "server_port": 44441,
       "uuid": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
-      "security": "chacha20-poly1305",
-      "global_padding": true,
-      "packet_encoding": "xudp",
       "transport": {
         "type": "http",
         "host": "me.com",
         "path": "/@JavidnamanIran/",
         "method": "GET"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 Simorgh 3",
-      "server": "for-real.hpcode.ir",
-      "server_port": 44442,
-      "uuid": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "me.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7r0pq5_2u7SNWkh0VqDstziDd4D_Uo8Vnt_NdEMoz0",
-          "short_id": "95f80c3eaf73"
-        }
       },
       "packet_encoding": "xudp"
     },
@@ -235,14 +209,6 @@
       },
       {
         "protocol": "stun",
-        "outbound": "block"
-      },
-      {
-        "ip_cidr": [
-          "10.10.34.34",
-          "10.10.34.35",
-          "10.10.34.36"
-        ],
         "outbound": "block"
       },
       {
