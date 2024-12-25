@@ -146,7 +146,7 @@
       "domain_strategy": "prefer_ipv6",
       "server": "all-v6.cybsecguru.com",
       "server_port": 44441,
-      "uuid": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+      "uuid": "ec8a65ad-bdfa-4095-9b8c-ea10890ca629",
       "tls": {
         "enabled": true,
         "server_name": "tile.openstreetmap.org",
