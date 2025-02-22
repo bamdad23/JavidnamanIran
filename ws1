@@ -1,0 +1,116 @@
+{
+  "log": {
+    "level": "none",
+    "access": "",
+    "error": ""
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns",
+        "address": "94.140.14.14"
+      },
+      {
+        "tag": "dns-fallback",
+        "address": "94.140.15.15"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 10808,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "users": [],
+      "set_system_proxy": false
+    },
+    {
+      "type": "http",
+      "tag": "http-in",
+      "listen": "127.0.0.1",
+      "listen_port": 10809,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "jnir-addr.cybsecguru.com",
+      "server_port": 443,
+      "uuid": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "ws",
+        "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+        "headers": {
+          "Host": "simorgh.hpcode.ir",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "simorgh.hpcode.ir",
+        "insecure": false,
+        "alpn": ["h2", "http/1.1"],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": ["socks-in", "http-in"],
+        "geoip": ["private"],
+        "outbound": "direct"
+      },
+      {
+        "inbound": ["socks-in", "http-in"],
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "inbound": ["socks-in", "http-in"],
+        "port": "443",
+        "network": "udp",
+        "outbound": "block"
+      },
+      {
+        "inbound": ["socks-in", "http-in"],
+        "outbound": "proxy"
+      }
+    ],
+    "final": "proxy"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "store_selected": true
+    }
+  }
+}
