@@ -72,7 +72,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "interface_name": "Azadi-VPN",
+      "interface_name": "JavidnamanIran-VPN",
       "mtu": 9000,
       "address": "172.18.0.1/30",
       "auto_route": true,
