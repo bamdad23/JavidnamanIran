@@ -37,8 +37,8 @@
       },
       {
         "domain_suffix": [
-          "hpcode.ir",
-          "29394900.xyz",
+          "adamhayward.co.uk",
+          "88981401.xyz",
           "pichondan.com"
         ],
         "server": "direct-dns",
@@ -91,6 +91,7 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
+        "🇩🇪 JNIR-1\n@JavidnamanIran",
         "🇩🇪 JNIR-1-IPv6\n@JavidnamanIran",
         "🇩🇪 JNIR-2\n@JavidnamanIran",
         "🇩🇪 JNIR-2-IPv6\n@JavidnamanIran",
