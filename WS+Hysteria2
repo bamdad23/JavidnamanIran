@@ -7,64 +7,57 @@
     "servers": [
       {
         "tag": "Internet-dns",
-        "address": "udp://1.1.1.2",
+        "address": "tcp://1.1.1.2",
         "strategy": "prefer_ipv4",
         "detour": "Internet"
       },
       {
-        "tag": "Best Latency-dns",
-        "address": "udp://1.1.1.2",
-        "strategy": "prefer_ipv4",
-        "detour": "Best Latency"
-      },
-      {
         "tag": "direct-dns",
-        "address": "https://1.12.12.12/dns-query",
+        "address": "tcp://1.1.1.2",
         "strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
-        "tag": "block-dns",
-        "address": "rcode://success"
+        "tag": "fake-dns",
+        "address": "fakeip"
       }
     ],
     "rules": [
       {
         "network": "udp",
         "port": 443,
-        "server": "block-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "domain_suffix": [
-          "adamhayward.co.uk",
-          "88981401.xyz",
-          "pichondan.com"
-        ],
-        "server": "direct-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Internet",
-        "server": "Internet-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Best Latency",
-        "server": "Best Latency-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "direct",
-        "server": "direct-dns",
-        "rewrite_ttl": 20
+        "action": "reject",
+        "method": "default"
       },
       {
         "outbound": "any",
         "server": "direct-dns",
         "rewrite_ttl": 20
+      },
+      {
+        "domain_suffix": [
+          ".ir",
+          ".xn--mgba3a4fra",
+          ".xn--mgba3a4f16a"
+        ],
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "inbound": "tun-in",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fake-dns",
+        "disable_cache": true
       }
     ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
     "strategy": "prefer_ipv4",
     "independent_cache": true
   },
@@ -72,17 +65,19 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "interface_name": "JavidnamanIran-VPN",
+      "interface_name": "JNIR-VPN",
       "mtu": 9000,
-      "address": "172.18.0.1/30",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "strict_route": true,
       "route_exclude_address": [
         "192.168.0.0/16",
         "fc00::/7"
       ],
-      "stack": "mixed",
-      "domain_strategy": "prefer_ipv4"
+      "stack": "mixed"
     }
   ],
   "outbounds": [
@@ -97,8 +92,8 @@
         "🇩🇪 JNIR-2-IPv6\n@JavidnamanIran",
         "🇩🇪 JNIR-3\n@JavidnamanIran",
         "🇩🇪 JNIR-3-IPv6\n@JavidnamanIran",
-        "🇳🇱 JNIR-5\n@JavidnamanIran",
-        "🇳🇱 JNIR-5-IPv6\n@JavidnamanIran"
+        "🇳🇱 JNIR-4\n@JavidnamanIran",
+        "🇳🇱 JNIR-4-IPv6\n@JavidnamanIran"
       ]
     },
     {
@@ -111,12 +106,12 @@
         "🇩🇪 JNIR-2-IPv6\n@JavidnamanIran",
         "🇩🇪 JNIR-3\n@JavidnamanIran",
         "🇩🇪 JNIR-3-IPv6\n@JavidnamanIran",
-        "🇳🇱 JNIR-5\n@JavidnamanIran",
-        "🇳🇱 JNIR-5-IPv6\n@JavidnamanIran"
+        "🇳🇱 JNIR-4\n@JavidnamanIran",
+        "🇳🇱 JNIR-4-IPv6\n@JavidnamanIran"
       ],
       "url": "http://1.1.1.1/",
       "interval": "3m0s",
-      "tolerance": 50,
+      "tolerance": 3,
       "idle_timeout": "9m0s"
     },
     {
@@ -126,7 +121,7 @@
       "server": "JNIR-1.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -156,7 +151,7 @@
       "server": "JNIR-1.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -186,7 +181,7 @@
       "server": "JNIR-2.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -216,7 +211,7 @@
       "server": "JNIR-2.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -246,7 +241,7 @@
       "server": "JNIR-3.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -276,7 +271,7 @@
       "server": "JNIR-3.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -301,12 +296,12 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇳🇱 JNIR-5\n@JavidnamanIran",
+      "tag": "🇳🇱 JNIR-4\n@JavidnamanIran",
       "domain_strategy": "ipv4_only",
       "server": "JNIR-5.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -331,12 +326,12 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇳🇱 JNIR-5-IPv6\n@JavidnamanIran",
+      "tag": "🇳🇱 JNIR-4-IPv6\n@JavidnamanIran",
       "domain_strategy": "ipv6_only",
       "server": "JNIR-5.pichondan.com",
       "server_port": 0,
       "server_ports": "35000:45000",
-      "hop_interval": "3m30s",
+      "hop_interval": "2m0s",
       "obfs": {
         "type": "salamander",
         "password": "@JavidnamanIran-Javid-SHAH-KingRezaPahlavi"
@@ -388,7 +383,8 @@
       {
         "network": "tcp",
         "port": 853,
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       },
       {
         "network": "udp",
@@ -396,11 +392,13 @@
           443,
           853
         ],
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       },
       {
         "protocol": "stun",
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       },
       {
         "source_ip_cidr": [
@@ -411,7 +409,8 @@
           "224.0.0.0/3",
           "ff00::/8"
         ],
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       },
       {
         "ip_cidr": [
@@ -419,7 +418,8 @@
           "10.10.34.35",
           "10.10.34.36"
         ],
-        "action": "reject"
+        "action": "reject",
+        "method": "default"
       },
       {
         "ip_is_private": true,
@@ -441,7 +441,13 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db",
-      "cache_id": "JavidnamanIran-VPN"
+      "cache_id": "JNIR-VPN",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "access_control_allow_origin": "http://yacd.haishan.me",
+      "access_control_allow_private_network": true
     }
   }
 }
